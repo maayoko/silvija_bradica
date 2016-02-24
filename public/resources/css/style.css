@@ -6,12 +6,20 @@
 @font-face {
   font-family: "Blue Vinyl";
   src: url("font/PrintClearly.otf");
+  src: url("font/printclearly_regular_macroman/PrintClearly-webfont.eot");
+  src: url("font/printclearly_regular_macroman/PrintClearly-webfont.ttf");
+  src: url("font/printclearly_regular_macroman/PrintClearly-webfont.woff") format("woff");
+  /*src: url("font/printclearly_regular_macroman/PrintClearly-webfont.svg") format("svg");*/
 }
 
 @font-face {
   font-family: "Blue Vinyl Bold";
   font-weight: bold;
   src: url("font/PrintBold.otf");
+  src: url("font/printclearly_regular_macroman/PrintBold-webfont.eot");
+  src: url("font/printclearly_regular_macroman/PrintBold-webfont.ttf");
+  src: url("font/printclearly_regular_macroman/PrintBold-webfont.woff") format("woff");
+  /*src: url("font/printclearly_regular_macroman/PrintBold-webfont.svg") format("svg");*/
 }
 
 * {
@@ -43,16 +51,6 @@ body {
     visibility: hidden;
 }
 
-/*@font-face {
-  font-family: "Blue Vinyl";
-  src: url("font/PrintClearly.otf");
-}
-
-@font-face {
-  font-family: "Blue Vinyl Bold";
-  font-weight: bold;
-  src: url("font/PrintBold.otf");
-}*/
 /**************************************************************
 *
 *       REUSABLE-COMPONENTS
@@ -279,6 +277,7 @@ a {
 }
 
 .slidesjs-pagination .active img {
+  -ms-filter: grayscale(0);
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
@@ -286,8 +285,9 @@ a {
 .slidesjs-pagination li a img {
   width: 80px;
   height: 65px;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  -ms-filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
   transition: 0.3s filter, 0.3s -webkit-filter;
   border: 1px solid #fff;
   object-fit: cover;
@@ -295,7 +295,7 @@ a {
 
 .slidesjs-pagination li a img:hover {
   -webkit-filter: grayscale(0);
-          filter: grayscale(0);
+          filter: none;
 }
 
 /**************************************************************
@@ -322,8 +322,8 @@ a {
 }
 
 .photos-order img {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
   -webkit-transition: 0.3s filter;
   -webkit-transition: 0.3s filter, 0.3s -webkit-filter;
   transition: 0.3s filter, 0.3s -webkit-filter;

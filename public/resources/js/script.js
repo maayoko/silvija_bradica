@@ -43,6 +43,11 @@ $(document).ready(function() {
     maxHeight: 800
   })
 
+  // var scale = 'scale(1)';
+  // document.body.style.webkitTransform =  scale;    // Chrome, Opera, Safari
+  // document.body.style.msTransform =   scale;       // IE 9
+  // document.body.style.transform = scale;
 
+  document.body.style.zoom = 1.0;
 
 });

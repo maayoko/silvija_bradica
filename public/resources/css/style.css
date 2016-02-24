@@ -6,20 +6,12 @@
 @font-face {
   font-family: "Blue Vinyl";
   src: url("font/PrintClearly.otf");
-  src: url("font/printclearly_regular_macroman/PrintClearly-webfont.eot");
-  src: url("font/printclearly_regular_macroman/PrintClearly-webfont.ttf");
-  src: url("font/printclearly_regular_macroman/PrintClearly-webfont.woff") format("woff");
-  /*src: url("font/printclearly_regular_macroman/PrintClearly-webfont.svg") format("svg");*/
 }
 
 @font-face {
   font-family: "Blue Vinyl Bold";
   font-weight: bold;
   src: url("font/PrintBold.otf");
-  src: url("font/printclearly_regular_macroman/PrintBold-webfont.eot");
-  src: url("font/printclearly_regular_macroman/PrintBold-webfont.ttf");
-  src: url("font/printclearly_regular_macroman/PrintBold-webfont.woff") format("woff");
-  /*src: url("font/printclearly_regular_macroman/PrintBold-webfont.svg") format("svg");*/
 }
 
 * {

@@ -1,0 +1,439 @@
+/**************************************************************
+*
+*       BASIC SETUP
+*
+**************************************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #FFF;
+    color: #000;
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {
+    zoom: 1
+}
+
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+@font-face {
+  font-family: "Blue Vinyl";
+  src: url("font/PrintClearly.otf");
+}
+
+@font-face {
+  font-family: "Blue Vinyl Bold";
+  font-weight: bold;
+  src: url("font/PrintBold.otf");
+}
+/**************************************************************
+*
+*       REUSABLE-COMPONENTS
+*
+**************************************************************/
+
+.container {
+  margin: 0 auto;
+  width: 1140px;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  width: 1600px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.row33 {
+  width: 380px;
+}
+
+/**************************************************************
+*
+*       CONTACT-INFO
+*
+**************************************************************/
+
+.contact-info ul li {
+  float: right;
+  line-height: 50px;
+  font-family: "Blue Vinyl";
+  color: rgba(0,0,0, 0.7);
+}
+
+.contact-info a {
+  color: rgba(0,0,0, 0.6);
+  -webkit-transition: 0.3s color;
+  transition: 0.3s color;
+}
+
+.contact-info a:hover {
+  color: rgba(0,0,0, 1);
+}
+
+.separator {
+  font-size: 50px;
+  font-family: "Blue Vinyl";
+}
+
+.contact-info ul li:nth-child(3) {
+  word-spacing: 0;
+  margin-right: 10px;
+  font-weight: 100;
+  font-family: "Blue Vinyl Bold";
+}
+
+.fa-facebook-square {
+  margin: 0 10px;
+}
+
+/**************************************************************
+*
+*       TITLE
+*
+**************************************************************/
+
+.title {
+  text-align: center;
+  margin-top: 30px;
+  position: relative;
+}
+
+.title p:first-of-type {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 80px;
+  font-family: "Blue Vinyl";
+}
+
+.title p:last-of-type {
+  position: relative;
+  bottom: 10px;
+}
+
+.triangle {
+  position: absolute;
+  top: 11px;
+  left: 542px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 15px 42px 0;
+  border-color: transparent #000000 transparent transparent;
+}
+
+/**************************************************************
+*
+*       NAVIGATION
+*
+**************************************************************/
+
+.nav {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.nav div {
+  display: inline-block;
+}
+
+.nav ul li:nth-child(even) {
+  position: relative;
+  top: 9px;
+}
+
+.nav ul li:nth-child(even) a {
+  padding: 2px 8px 4px 8px;
+  -webkit-transition: 0.3s background-color, 0.3s color;
+  transition: 0.3s background-color, 0.3s color;
+  font-size: 18px;
+}
+
+.nav ul li:nth-child(even) a:hover,
+.nav ul li:nth-child(even) a:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.nav ul li {
+  float: right;
+}
+
+.selected {
+  background-color: #000;
+  color: #fff;
+}
+
+/**************************************************************
+*
+*       SECTION IMG-SLIDER
+*
+**************************************************************/
+
+.img-slider {
+  margin-top: 10px;
+  position: relative;
+}
+
+#slides {
+  height: 900px;
+  border-top: 2px solid #585858;
+  display: none;
+  position: relative;
+  z-index: 1;
+}
+
+#slides .slidesjs-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+
+}
+
+.slidesjs-next,
+.slidesjs-previous {
+  position: absolute;
+  bottom: 24px;
+  z-index: 9999;
+  color: #bebebe;
+  font-size: 50px;
+  font-weight: 100;
+  width: 80px;
+  height: 65px;
+  border: 1px solid #fff;
+  text-align: center;
+  background-color: transparent;
+  transition: 0.3s background-color;
+}
+
+.slidesjs-previous {
+  left: 225px;
+}
+
+.slidesjs-next {
+  left: 1285px;
+}
+
+.slidesjs-next i {
+  margin-left: 5px;
+}
+
+.slidesjs-previous i {
+  margin-right: 5px;
+}
+
+.slidesjs-next:hover,
+.slidesjs-previous:hover {
+  background-color: rgba(255, 255, 255, 0.20);
+
+}
+
+.slidesjs-pagination {
+  position: absolute;
+  left: 0;
+  z-index: 9998;
+  width: 100%;
+  text-align: center;
+  bottom: 20px;
+  left: -5px;
+}
+
+.slidesjs-pagination li {
+  display: inline;
+  margin: 0 8px;
+}
+
+.slidesjs-pagination .active img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.slidesjs-pagination li a img {
+  width: 80px;
+  height: 65px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  transition: 0.3s filter, 0.3s -webkit-filter;
+  border: 1px solid #fff;
+  object-fit: cover;
+}
+
+.slidesjs-pagination li a img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+/**************************************************************
+*
+*       SECTION FRESH PHOTOS
+*
+**************************************************************/
+
+.fresh-photos {
+  margin-top: 25px;
+}
+
+.fresh-photos p {
+  margin-bottom: 25px;
+  text-align: center;
+  font-family: "Blue Vinyl";
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.photos-order {
+  height: 900px;
+}
+
+.photos-order img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: 0.3s filter;
+  -webkit-transition: 0.3s filter, 0.3s -webkit-filter;
+  transition: 0.3s filter, 0.3s -webkit-filter;
+}
+
+.photos-order img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.photos-order .row33 {
+  display: inline-block;
+  float: left;
+  height: 900px;
+}
+
+.photos-order .row33:first-of-type div:first-of-type {
+  height: 340px;
+  width: 370px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.photos-order .row33:first-of-type div:last-of-type {
+  height: 540px;
+  width: 370px;
+  margin-right: 20px;
+}
+
+.photos-order .row33:first-of-type div:first-of-type img,
+.photos-order .row33:first-of-type div:last-of-type img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.photos-order .row33:nth-of-type(2) div:first-of-type {
+  height: 540px;
+  width: 360px;
+  margin: 0 20px 20px 10px;
+}
+
+.photos-order .row33:nth-of-type(2) div:last-of-type {
+  height: 340px;
+  width: 360px;
+  margin: 0 20px 0 10px;
+}
+
+.photos-order .row33:nth-of-type(2) div:first-of-type img,
+.photos-order .row33:nth-of-type(2) div:last-of-type img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.photos-order .row33:last-of-type div:first-of-type {
+  height: 340px;
+  width: 370px;
+  margin: 0 0 20px 10px;
+}
+
+.photos-order .row33:last-of-type div:last-of-type {
+  height: 540px;
+  width: 370px;
+  margin: 0 0 0 10px;
+}
+
+.photos-order .row33:last-of-type div:first-of-type img,
+.photos-order .row33:last-of-type div:last-of-type img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/**************************************************************
+*
+*       FOOTER
+*
+**************************************************************/
+
+footer {
+  position: relative;
+  height: 200px;
+}
+
+footer .container div {
+  position: relative;
+  height: 100px;
+}
+
+.left-align {
+  display: inline-block;
+  font-size: 60px;
+  font-family: "Blue Vinyl";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.left-align:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 8px;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 32px 0;
+  border-color: transparent #000000 transparent transparent;
+}
+
+.right-align {
+  display: inline-block;
+  position: absolute;
+  bottom: 12px;
+  right: 0;
+  font-size: 16px;
+}

@@ -3,6 +3,16 @@
 *       BASIC SETUP
 *
 **************************************************************/
+@font-face {
+  font-family: "Blue Vinyl";
+  src: url("font/PrintClearly.otf");
+}
+
+@font-face {
+  font-family: "Blue Vinyl Bold";
+  font-weight: bold;
+  src: url("font/PrintBold.otf");
+}
 
 * {
   margin: 0;
@@ -33,7 +43,7 @@ body {
     visibility: hidden;
 }
 
-@font-face {
+/*@font-face {
   font-family: "Blue Vinyl";
   src: url("font/PrintClearly.otf");
 }
@@ -42,7 +52,7 @@ body {
   font-family: "Blue Vinyl Bold";
   font-weight: bold;
   src: url("font/PrintBold.otf");
-}
+}*/
 /**************************************************************
 *
 *       REUSABLE-COMPONENTS
